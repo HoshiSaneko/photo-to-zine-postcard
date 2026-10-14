@@ -58,17 +58,49 @@ Either way, the agent should look at the photo first and fill the Photo Analysis
 - matching functional postcard back
 - generated at the model's largest native 3:2 size (e.g. `1536 × 1024`), upscaled to at least `1800 × 1200 px` before printing; 4× upscaling recommended
 
-## Official Example
+## Examples
 
 **Changsha · Du Fu River Pavilion (杜甫江阁)**
 
-| Source photo | Postcard front | Postcard back |
-|---|---|---|
-| ![Source photo](assets/changsha-dufu-jiangge-photo.jpg) | ![Postcard front](assets/changsha-dufu-jiangge-front.png) | ![Postcard back](assets/changsha-dufu-jiangge-back.png) |
+| Source photo | Postcard front |
+|---|---|
+| ![Source photo](assets/changsha-dufu-jiangge-photo.jpg) | ![Postcard front](assets/changsha-dufu-jiangge-front.png) |
 
 Verse: 夜醉长沙酒，晓行湘水春。—— Du Fu, *Leaving Tanzhou* (《发潭州》)
 
 The tagline 湘江潮落 · 诗意长留 is an original phrase, not a quotation. The full prompts used are in [`examples/changsha-dufu-jiangge-prompts.md`](examples/changsha-dufu-jiangge-prompts.md).
+
+### Ningbo Postcards
+
+These examples explore Tianyi Ge, Dongqian Lake, and the Old Bund with varied scenery and layouts. The short phrases in these images are original copy, not quotations from classical poetry.
+
+| Tianyi Ge · Garden and Pond | Dongqian Lake · Lighthouse |
+|---|---|
+| ![Tianyi Ge postcard](assets/ningbo/tianyi-ge.png) | ![Dongqian Lake lighthouse postcard](assets/ningbo/dongqian-lake-lighthouse.png) |
+
+| Old Bund · Bridge Lights | Dongqian Lake · Lakeside Palms |
+|---|---|
+| ![Ningbo Old Bund postcard](assets/ningbo/old-bund.png) | ![Dongqian Lake palms postcard](assets/ningbo/dongqian-lake-palms.png) |
+
+**Dongqian Lake · Quiet Waterfront**
+
+![Dongqian Lake waterfront postcard](assets/ningbo/dongqian-lake-waterfront.png)
+
+### Printed Examples
+
+Photos of the printed postcards show the paper texture and finished results. Lighting can affect the colors seen in these photos.
+
+| Tianyi Ge | Dongqian Lake Lighthouse |
+|---|---|
+| ![Printed Tianyi Ge postcard](assets/printed/tianyi-ge.jpg) | ![Printed lighthouse postcard](assets/printed/dongqian-lake-lighthouse.jpg) |
+
+| Old Bund | Dongqian Lake Palms |
+|---|---|
+| ![Printed Old Bund postcard](assets/printed/old-bund.jpg) | ![Printed lakeside palms postcard](assets/printed/dongqian-lake-palms.jpg) |
+
+**Dongqian Lake · Printed Waterfront Postcard**
+
+![Printed waterfront postcard](assets/printed/dongqian-lake-waterfront.jpg)
 
 ## Customize Your Own Version
 
@@ -87,7 +119,8 @@ photo-to-zine-postcard/
 └── assets/
     ├── changsha-dufu-jiangge-photo.jpg
     ├── changsha-dufu-jiangge-front.png
-    └── changsha-dufu-jiangge-back.png
+    ├── ningbo/     # Ningbo postcard images
+    └── printed/    # Photos of printed postcards
 ```
 
 ## Current Version
@@ -97,7 +130,7 @@ photo-to-zine-postcard/
 - keep the photo's camera angle; plaque text must be exact and keep its reading direction, or be left blank
 - resolution rule changed to "largest native size, then upscale", matching common image models
 - templates no longer hardcode values; added title, seal, and attribution rules for non-Chinese places
-- tagline may be original but must not pose as a quotation; added back example and filled example prompts
+- tagline may be original but must not pose as a quotation; added filled example prompts
 
 **v1.0.0** — first public release.
 

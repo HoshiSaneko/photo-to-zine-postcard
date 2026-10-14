@@ -58,17 +58,49 @@ Claude Code 等编码 agent 通常不能自己画图，但可以把 `SKILL.md` �
 - 一张统一、可书写的明信片背面
 - 以模型支持的最大 3:2 尺寸生成（如 `1536 × 1024`），打印前放大到至少 `1800 × 1200 px`，推荐 4× 超分辨率
 
-## 官方案例
+## 示例
 
 **长沙 · 杜甫江阁**
 
-| 原照 | 明信片正面 | 明信片背面 |
-|---|---|---|
-| ![杜甫江阁原照](assets/changsha-dufu-jiangge-photo.jpg) | ![杜甫江阁明信片正面](assets/changsha-dufu-jiangge-front.png) | ![杜甫江阁明信片背面](assets/changsha-dufu-jiangge-back.png) |
+| 原照 | 明信片正面 |
+|---|---|
+| ![杜甫江阁原照](assets/changsha-dufu-jiangge-photo.jpg) | ![杜甫江阁明信片正面](assets/changsha-dufu-jiangge-front.png) |
 
 诗句：夜醉长沙酒，晓行湘水春。—— 杜甫《发潭州》
 
 标语「湘江潮落 · 诗意长留」为原创短句，非引文。生成所用的完整提示词见 [`examples/changsha-dufu-jiangge-prompts.md`](examples/changsha-dufu-jiangge-prompts.md)。
+
+### 宁波作品
+
+以下示例展示天一阁、东钱湖与老外滩的不同景色与排版。画面中的短句为原创文案，不作为古诗引用。
+
+| 天一阁 · 竹影清池 | 东钱湖 · 灯塔 |
+|---|---|
+| ![宁波天一阁 · 竹影清池](assets/ningbo/tianyi-ge.png) | ![宁波东钱湖灯塔](assets/ningbo/dongqian-lake-lighthouse.png) |
+
+| 老外滩 · 桥灯映江 | 东钱湖 · 湖畔棕榈 |
+|---|---|
+| ![宁波老外滩 · 桥灯映江](assets/ningbo/old-bund.png) | ![宁波东钱湖 · 湖畔棕榈](assets/ningbo/dongqian-lake-palms.png) |
+
+**东钱湖 · 静谧水岸**
+
+![宁波东钱湖 · 静谧水岸](assets/ningbo/dongqian-lake-waterfront.png)
+
+### 实物示例
+
+以下为明信片打印后的实拍照片，可参考纸面纹理与成品效果。拍摄光线会影响照片中的色彩表现。
+
+| 天一阁 | 东钱湖灯塔 |
+|---|---|
+| ![天一阁明信片实物](assets/printed/tianyi-ge.jpg) | ![东钱湖灯塔明信片实物](assets/printed/dongqian-lake-lighthouse.jpg) |
+
+| 老外滩 | 东钱湖湖畔棕榈 |
+|---|---|
+| ![老外滩明信片实物](assets/printed/old-bund.jpg) | ![东钱湖湖畔棕榈明信片实物](assets/printed/dongqian-lake-palms.jpg) |
+
+**东钱湖 · 静谧水岸实物**
+
+![东钱湖静谧水岸明信片实物](assets/printed/dongqian-lake-waterfront.jpg)
 
 ## 如何定制自己的版本
 
@@ -87,7 +119,8 @@ photo-to-zine-postcard/
 └── assets/
     ├── changsha-dufu-jiangge-photo.jpg
     ├── changsha-dufu-jiangge-front.png
-    └── changsha-dufu-jiangge-back.png
+    ├── ningbo/     # Ningbo postcard images
+    └── printed/    # Photos of printed postcards
 ```
 
 ## 当前版本
@@ -97,7 +130,7 @@ photo-to-zine-postcard/
 - 要求保持原照拍摄角度；匾额文字必须准确且保持阅读方向，否则留白
 - 分辨率改为"最大原生尺寸生成 + 放大"，与主流生图模型一致
 - 模板去掉写死的内容，补充非中文地点的标题、印章和署名规则
-- 明确标语可原创但不得伪装成引文；新增背面示例与示例提示词文件
+- 明确标语可原创但不得伪装成引文；新增示例提示词文件
 
 **v1.0.0**：首个公开版本。
 
